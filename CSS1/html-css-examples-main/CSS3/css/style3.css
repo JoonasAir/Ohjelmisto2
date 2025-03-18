@@ -1,0 +1,38 @@
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+header {
+    display: flex;
+}
+
+h1 {
+    background-color: orange;
+    width: 40%;
+}
+
+nav {
+    width: 60%;
+}
+
+ul {
+    display: flex; 
+    list-style-type: none;
+    justify-content: space-evenly;
+    background-color: gold;
+}
+
+li a {
+    background-color: darkblue;
+    color: floralwhite;
+    width: 10rem;
+    height: 3rem;
+    display: block;
+    text-align: center;
+    line-height: 3rem;
+}
+
+li a:hover {
+    background-color: hsl(240, 100%, 50%);
+}

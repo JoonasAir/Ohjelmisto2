@@ -1,0 +1,33 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+header {
+    background-color:chartreuse;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: chocolate;
+}
+
+li a:hover::after {
+    content: "%"
+}
+main {
+    background-color: darkseagreen;
+}
+
+footer {
+    background-color: grey;
+}
+

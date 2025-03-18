@@ -1,0 +1,43 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+#markopic {
+    width: 100%;
+}
+
+header {
+    background-color: cadetblue;
+}
+
+nav {
+    background-color: burlywood;
+}
+
+main {
+    background-color: #9c9cac;
+}
+
+section {
+    background-color: gold;
+}
+
+article {
+    background-color: indianred;
+}
+
+aside {
+    background-color: gainsboro;
+}
+
+footer {
+    background-color: teal;
+}
+
+form {
+    background-color: floralwhite;
+}

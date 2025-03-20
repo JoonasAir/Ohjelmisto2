@@ -28,6 +28,8 @@ for i in range(10):
     arvohuippunopeus = random.randint(100, 200)
     auto = Auto(f"ABC-{numero + 1}", arvohuippunopeus)
     autolista.append(auto)
+    #autolista.append(Auto(f"ABC-{numero + 1}", arvohuippunopeus))
+    #toimii myös
     numero += 1
 
 kilpailu = True
@@ -42,9 +44,11 @@ while kilpailu:
             kilpailu = False
             break
 
-    
+autolista.sort(key = lambda a: a.matka, reverse=True)
+
 for auto in autolista:
     taulukko.add_row([auto.rekisteritunnus, auto.huippunopeus, auto.matka])
+    taulukko.add_divider
     
 print(taulukko)    
    

@@ -34,7 +34,29 @@ class Hissi:
 
 class Talo:
     def __init__(self, talon_ylin_kerros, talon_alin_kerros, hissien_lkm):
-        self.
+        self.talon_ylin_kerros = talon_ylin_kerros
+        self.talon_alin_kerros = talon_alin_kerros
+        self.hissien_lkm = hissien_lkm
+        
+        
+
+    def aja_hissiä(self, hissi, kohde):
+        self.hissi = hissilista[hissi - 1]
+        
+        pass
+
+
+
+talo = Talo(1, 18, 2)
+
+hissilista = []
+for i in range(talo.hissien_lkm):
+    hissi = f"Hissi {i + 1}"
+    hissilista.append(hissi)
+
+
+talo.aja_hissiä(2, 4)
+
 
 
 

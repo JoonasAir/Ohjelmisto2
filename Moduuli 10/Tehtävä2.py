@@ -1,9 +1,3 @@
-""" Jatka edellisen tehtävän ohjelmaa siten, että teet Talo-luokan. 
-Talon alustajaparametreina annetaan alimman ja ylimmän kerroksen numero sekä hissien lukumäärä. 
-Talon luonnin yhteydessä talo luo tarvittavan määrän hissejä. Hissien lista tallennetaan talon ominaisuutena. 
-Kirjoita taloon metodi aja_hissiä, joka saa parametreinaan hissin numeron ja kohdekerroksen. 
-Kirjoita pääohjelmaan lauseet talon luomiseksi ja talon hisseillä ajelemiseksi. """
-
 class Hissi:
     def __init__(self, alin_kerros, ylin_kerros):
         self.alin_kerros = alin_kerros  
@@ -22,7 +16,7 @@ class Hissi:
 
     def siirry_kerrokseen(self, kerros):
         if kerros < self.alin_kerros or kerros > self.ylin_kerros:
-            print("Kerrosta ei löytynyt.")
+            print(f"Talossa ei ole kerrosta numero {kerros}")
             return
 
         while self.nykyinen_kerros < kerros:
@@ -33,29 +27,33 @@ class Hissi:
 
 
 class Talo:
-    def __init__(self, talon_ylin_kerros, talon_alin_kerros, hissien_lkm):
+    def __init__(self, talon_alin_kerros, talon_ylin_kerros, hissien_lkm):
         self.talon_ylin_kerros = talon_ylin_kerros
         self.talon_alin_kerros = talon_alin_kerros
-        self.hissien_lkm = hissien_lkm
+        self.hissit = []
+        
+        for i in range(hissien_lkm):
+            hissi = Hissi(talon_alin_kerros, talon_ylin_kerros)
+            self.hissit.append(hissi)
+            
+            
+    def aja_hissillä(self, hissi_nro, kerros):
+        if hissi_nro < 1 or hissi_nro > len(self.hissit):
+            print(f"Hissiä numero {hissi_nro} ei löytynyt!")
+            return
+        
+        hissi = self.hissit[hissi_nro -1]
+        print(f"Valitsit hissin numero {hissi_nro}.")
+        print(f"Valitsit kerroksen {kerros}")
+        hissi.siirry_kerrokseen(kerros)
         
         
-
-    def aja_hissiä(self, hissi, kohde):
-        self.hissi = hissilista[hissi - 1]
-        
-        pass
-
-
-
 talo = Talo(1, 18, 2)
 
-hissilista = []
-for i in range(talo.hissien_lkm):
-    hissi = f"Hissi {i + 1}"
-    hissilista.append(hissi)
-
-
-talo.aja_hissiä(2, 4)
+talo.aja_hissillä(2, 18)
+talo.aja_hissillä(2, 1)
+        
+        
 
 
 

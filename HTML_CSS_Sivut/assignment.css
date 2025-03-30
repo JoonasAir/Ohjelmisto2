@@ -1,0 +1,128 @@
+.container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-image: url("https://img.freepik.com/free-photo/particle-lines-futuristic-network-background_53876-129729.jpg?t=st=1743348764~exp=1743352364~hmac=20bb220f06f3b6fbd79c9ec8d04e9d5be911e6a63087436d465a1af0a5026057&w=1060");
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:aliceblue;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rem;
+}
+
+header {
+    display: flex;
+    background-color: lightblue;
+    width: 100%;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    background-color: skyblue;
+    display: flex;
+    margin-left: -20px;
+}
+
+nav {
+    margin-left: auto;
+    justify-content: center;
+    margin-top: 0;
+}
+
+ul {
+
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    padding: 1rem;
+    margin:0;
+   
+}
+
+li a {
+    text-decoration: none;
+}
+
+
+#kuva1 {
+    margin-top: -60px;
+}
+
+
+#otsikko {
+    text-align: left;
+    position:relative;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    line-height: 5;
+}
+
+#contact {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    max-width: 900px; 
+    margin-top: -10px; 
+}
+
+article {
+    width: 100%;
+    padding: 1rem;
+    margin: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    float: left;
+    background-color: lightgray;
+    
+}
+
+
+
+article h3 {
+    text-align: center;
+}
+
+#contactMAP {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -120px;
+    margin-right: 200px;
+}
+
+figure {
+    text-align: center;
+    margin: 0;
+    padding: 0;    
+}
+
+iframe {
+    max-width: 100%;
+    height: 300px;
+}
+
+@media screen and (min-width: 769px) {
+    .container {
+        width: 80%;
+    }
+    article {
+        width: 30%
+    }
+}

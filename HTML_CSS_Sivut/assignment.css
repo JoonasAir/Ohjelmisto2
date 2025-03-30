@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
 .container {
     width: 100%;
     margin: auto;
     text-align: center;
-    padding: 20px;
     background-image: url("https://img.freepik.com/free-photo/particle-lines-futuristic-network-background_53876-129729.jpg?t=st=1743348764~exp=1743352364~hmac=20bb220f06f3b6fbd79c9ec8d04e9d5be911e6a63087436d465a1af0a5026057&w=1060");
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: scroll;
 }
 
 body {
@@ -23,50 +25,71 @@ main {
     padding-bottom: 10rem;
 }
 
+.homepage {
+    padding: 150px 0 0 0;
+    margin: 0px; 
+}
+
+#homepageh2{
+    font-size: 60px;
+    margin-top: -50px
+}
+
+.sisennysP {
+    padding: 10px 200px;
+}
+
+figure p {
+    padding: 0 30px;
+}
+
 header {
     display: flex;
     background-color: lightblue;
-    width: 100%;
+    width:80%;
+    position: absolute;
+    top: 0; 
 }
 
 h1 {
-    padding: 0;
     margin: 0;
     background-color: skyblue;
     display: flex;
-    margin-left: -20px;
+    padding: 5px 40px 0 ;
 }
 
 nav {
     margin-left: auto;
     justify-content: center;
     margin-top: 0;
+    z-index: 10;
 }
 
 ul {
 
     display: flex;
     list-style-type: none;
-    gap: 40px;
+    gap: 100px;
     padding: 1rem;
     margin:0;
+    z-index: 10;
    
 }
 
 li a {
     text-decoration: none;
+    z-index: 10;
 }
 
-
 #kuva1 {
-    margin-top: -60px;
+    margin-top: -150px;
 }
 
 
 #otsikko {
     text-align: left;
     position:relative;
-    padding: 0;
+    padding: 7px 30px;
     margin: 0;
 }
 
@@ -80,7 +103,11 @@ h2 {
     justify-content: space-between; 
     align-items: flex-start;
     max-width: 900px; 
-    margin-top: -10px; 
+    margin-top: -20px; 
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding: 0 30px;
 }
 
 article {
@@ -94,8 +121,6 @@ article {
     
 }
 
-
-
 article h3 {
     text-align: center;
 }
@@ -103,8 +128,8 @@ article h3 {
 #contactMAP {
     display: flex;
     justify-content: flex-end;
+    margin-right: 50px;
     margin-top: -120px;
-    margin-right: 200px;
 }
 
 figure {

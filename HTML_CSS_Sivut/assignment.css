@@ -32,11 +32,7 @@ main {
 
 #homepageh2{
     font-size: 60px;
-    margin-top: -50px
-}
-
-.sisennysP {
-    padding: 10px 200px;
+    margin-top: 16px;
 }
 
 figure p {
@@ -83,13 +79,24 @@ li a {
 
 #kuva1 {
     margin-top: -150px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+  
 }
 
+#kuva1product{
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
 
 #otsikko {
     text-align: left;
     position:relative;
-    padding: 7px 30px;
+    padding: 15rem 30px;
     margin: 0;
 }
 
@@ -103,11 +110,17 @@ h2 {
     justify-content: space-between; 
     align-items: flex-start;
     max-width: 900px; 
-    margin-top: -20px; 
+    margin-top:-15rem; 
     position: relative;
     z-index: 1;
     text-align: left;
     padding: 0 30px;
+}
+
+#contact-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 article {
@@ -128,8 +141,11 @@ article h3 {
 #contactMAP {
     display: flex;
     justify-content: flex-end;
-    margin-right: 50px;
-    margin-top: -120px;
+    margin-left: -92px;
+    margin-top: -10rem;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
 }
 
 figure {
@@ -143,11 +159,65 @@ iframe {
     height: 300px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 768px) {
     .container {
-        width: 80%;
+        width: 100%;
+        padding: 0 20px;
     }
+
+    #tuotekuva1 {
+        width: 100%
+    }
+
+    #tuotekuva2 {
+        width: 100%
+    }
+
+    #tuotekuva3 {
+        width: 100%
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    ul {
+        flex-direction: column; 
+        gap: 0;
+        text-align: left;
+        display: flex;
+    }
+
     article {
-        width: 30%
+        width: 100%; 
+        margin-top: 20px;
+    }
+
+    #contact {
+        flex-direction: column; 
+        margin-top: 0;
+        text-wrap: wrap;
+    }
+
+    iframe {
+        height: 200px; 
     }
 }
+
+#contactMAP {
+    width: 100%;  
+    text-wrap: wrap;
+}
+
+
+@media screen and (min-width: 769px) {
+    .container {
+        width: 80%; 
+    }
+
+}
+    article {
+        width: 30%; /
+    }

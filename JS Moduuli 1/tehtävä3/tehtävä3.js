@@ -1,3 +1,5 @@
+"use strict";
+
 let number1 = +prompt("Insert first numbers")
 let number2 = +prompt("Insert second numbers")
 let number3 = +prompt("Insert third numbers")

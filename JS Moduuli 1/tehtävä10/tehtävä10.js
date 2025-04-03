@@ -25,4 +25,4 @@ for (let i = 1; i <= mil; i++) {
 let probability = (eyesumtotal / mil * 100).toFixed(2);
 
 
-document.querySelector("#answer").innerHTML = probability;
+document.querySelector("#answer").innerHTML = `If you thwor ${dicecount} dices, probability to get total sum of ${eyesum} is ${probability}%.`

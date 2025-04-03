@@ -5,7 +5,7 @@ import requests
 import requests
 
 
-API_KEY = "f23df786656104dd27426c1f6b2a0c82"
+API_KEY = #"YourApiKeyHere"
 
 
 

@@ -3,13 +3,16 @@ import json
 
 pyyntö = "https://api.chucknorris.io/jokes/random"
 
-answer = input("\nDo you want to hear Chuck Norris Joke? (Y)(N)").upper()
-
+answer = input("\nWrote (Y) if you want to hear Chuck Norris joke: ").upper()
 vastaus = requests.get(pyyntö).json()
-while answer != "N":
-    if answer == "Y": 
-        vastaus = requests.get(pyyntö).json()
-        print(vastaus["value"])
-        answer = input("\nDo you want to hear more Chuck Norris jokes? (Y)(N): ").upper()
 
-print("Good bye..")
+try:
+    request = requests.get(pyyntö)
+    if request.status_code==200:
+        if answer == "Y":
+            vastaus = requests.get(pyyntö).json()
+            print(f"\n{vastaus['value']}")
+        else:
+            print("Good bye..")
+except requests.exceptions.RequestException as e:
+    print("Hakua ei voitu suorittaa.")            

@@ -30,7 +30,7 @@ class Lehti(Julkaisu):
         self.päätoimittaja = päätoimittaja
 
     def tulosta_tiedot(self):
-        print(f"Lehden nimi: {self.nimi} Päätoimittaja: {self.päätoimittaja}")
+        print(f"Lehden nimi: {self.nimi} Päätoimittaja: {self.päätoimittaja}\n")
 
 
 

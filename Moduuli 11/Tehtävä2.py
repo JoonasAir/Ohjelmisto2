@@ -1,9 +1,3 @@
-import random
-from prettytable import PrettyTable
-
-taulukko = PrettyTable()
-taulukko.field_names = ["Rekisteritunnus", "Huippunopeus (km/h)", "Kuljettu matka (km)"]
-
 class Auto:
     def __init__(self, rekisteritunnus, huippunopeus):
         self.rekisteritunnus = rekisteritunnus

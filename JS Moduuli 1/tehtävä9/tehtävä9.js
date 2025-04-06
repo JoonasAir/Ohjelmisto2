@@ -6,7 +6,7 @@ if (num < 2) {
     document.querySelector("#answer").innerHTML = "Given number " + num + " is not a prime number." 
 } else {
     let isPrime = true;
-    for (let jakaja = 2; jakaja <= Math.sqrt(num); jakaja++) { //Math.sqrt laskee ohjelman laskentatehoa, ei tarvitse käydä niin monta lukua läpi.
+    for (let jakaja = 2; jakaja < num; jakaja++) { 
         if (num % jakaja === 0) {
         isPrime = false;
         break;

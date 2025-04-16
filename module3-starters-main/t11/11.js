@@ -92,12 +92,14 @@ const picArray = [
   },
 ];
 
+
 // add your code here
 
 const target = document.getElementById("pictures")
 
 
 for(let i = 0; i < picArray.length; i++) {
+
   let article = document.createElement("article");
 
 

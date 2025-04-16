@@ -93,9 +93,12 @@ const picArray = [
 ];
 
 
-// add your code here
 
 const target = document.getElementById("pictures")
+const dialog = document.querySelector("dialog"); 
+const modal = dialog.querySelector("img"); 
+const close = dialog.querySelector("span"); 
+
 
 
 for(let i = 0; i < picArray.length; i++) {
@@ -125,5 +128,20 @@ for(let i = 0; i < picArray.length; i++) {
   article.appendChild(p);
 
   target.appendChild(article);
+
+
+  article.addEventListener("click", () => {
+    modal.src = picArray[i].image.large;
+    modal.alt = picArray[i].title; 
+    dialog.showModal(); 
+
+  });
+
+
+  target.appendChild(article);
 }
 
+
+close.addEventListener("click", () => {
+  dialog.close();
+});

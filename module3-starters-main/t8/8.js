@@ -3,8 +3,8 @@ const button = document.getElementById("start");
 button.addEventListener("click", (event) =>{
     const selection = document.getElementById("operation").value;
     const result = document.getElementById("result");
-    const num1 = document.getElementById("num1").value;
-    const num2 = document.getElementById("num2").value;
+    const num1 = Number(document.getElementById("num1").value);
+    const num2 = Number(document.getElementById("num2").value);
 
     if (selection === "add"){
         sum = num1 + num2

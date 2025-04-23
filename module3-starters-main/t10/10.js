@@ -1,12 +1,11 @@
-const button = document.getElementById("source");
-const result = document.getElementById("target")
+const target = document.getElementById("target")
+const form = document.getElementById("source")
 
-button.addEventListener("submit", (event) =>{
-    event.preventDefault();
-    const first = document.querySelector("input[name='firstname']").value;
-    const second = document.querySelector("input[name='lastname']").value;
-    
+form.addEventListener('submit', function(evt){
+    evt.preventDefault()
+    const fname = document.querySelector("input[name=firstname]").value
+    const lname = document.querySelector("input[name=lastname]").value
 
-    result.innerHTML = `Your name is ${first} ${second}.`
+    target.innerHTML = `Terve ${fname} ${lname}!`
+
 })
-

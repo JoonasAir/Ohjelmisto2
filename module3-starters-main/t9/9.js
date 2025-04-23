@@ -1,38 +1,32 @@
-const button = document.getElementById("start");
+"use strict";
 
-button.addEventListener("click", (event) =>{
-    const input = document.getElementById("calculation").value;
-    const result = document.getElementById("result");
-    
-    if(input.includes("+")) {
-        let parts = input.split("+");
-        number1 = parseInt(parts[0]);
-        number2 = parseInt(parts[1])
-        answer = number1 + number2;
-        return answer
-        
-    } else if (input.includes("-")) {
-        let parts = input.split("-");
-        number1 = parseInt(parts[0]);
-        number2 = parseInt(parts[1])
-        answer = number1 - number2;
+const start = document.getElementById("start")
 
-    } else if (input.includes("/")) {
-        let parts = input.split("/");
-        number1 = parseInt(parts[0]);
-        number2 = parseInt(parts[1]);
-        answer = number1 / number2;
+start.addEventListener('click', function(evt){
+    const input = document.getElementById("calculation").value
+    const p = document.getElementById("result")
+    const split = input.split(/([+\-*/])/)
+    let num1 = parseInt(split[0])
+    let value = split[1]
+    let num2 = parseInt(split[2])
+    let result;
 
-    } else if (input.includes("*")) {
-        let parts = input.split("*");
-        number1 = parseInt(parts[0]);
-        number2 = parseInt(parts[1])
-        answer = number1 * number2
-    } else {
-        answer = "Väärä syöte";
+    switch(value){
+        case "+":
+            result = num1 + num2
+            break
+        case "-":
+            result = num1 - num2
+            break
+        case "/":
+            result = num1 / num2
+            break
+        case "*":
+            result = num1 * num2
+            break
+        default:
+            p.innerHTML = "Väärä syöte"
     }
+    p.innerHTML = result
 
-    result.innerHTML = answer;
-
-});
-
+})
